@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.service;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -9,8 +9,8 @@ import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static com.example.demo.Constants.*;
-import static com.example.demo.TimeUtils.evaluateExecutionTime;
+import static com.example.demo.utils.Constants.*;
+import static com.example.demo.utils.TimeUtils.evaluateExecutionTime;
 
 @Service
 @Slf4j
@@ -86,7 +86,7 @@ public class PhoneNumberService {
             phone = findPhoneNumberByAccNum(accountNumber);
 
             long delay = 200;
-            // log.info("PhoneNumberController phone= " + phone + " delay= " + delay + " count" + count.incrementAndGet() + " accNum=" + accountNumber);
+             log.info("PhoneNumberController phone= " + phone + " delay= " + delay + " count" + count.incrementAndGet() + " accNum=" + accountNumber);
 
             Thread.sleep(delay);
         } catch (InterruptedException e) {

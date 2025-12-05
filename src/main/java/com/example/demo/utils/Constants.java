@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.utils;
 
 public class Constants {
     public final static int ACCOUNT_COUNT = 1000;

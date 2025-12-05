@@ -1,5 +1,8 @@
-package com.example.demo;
+package com.example.demo.service;
 
+import com.example.demo.AccountServiceGrpc;
+import com.example.demo.GetContactInfoRequest;
+import com.example.demo.GetContactInfoResponse;
 import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
 
