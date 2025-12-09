@@ -1,5 +1,6 @@
-package com.example.demo;
+package com.example.demo.controller;
 
+import com.example.demo.service.PhoneNumberService;
 import io.opentelemetry.api.trace.Tracer;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -8,8 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import static com.example.demo.Constants.URL_PHONE_BY_BAD_ACCOUNT;
-import static com.example.demo.Constants.URL_PHONE_BY_GOOD_ACCOUNT;
+import static com.example.demo.utils.Constants.URL_PHONE_BY_BAD_ACCOUNT;
+import static com.example.demo.utils.Constants.URL_PHONE_BY_GOOD_ACCOUNT;
 
 @RestController
 @RequiredArgsConstructor
@@ -116,5 +117,6 @@ public class PhoneNumberController {
         }
         return ResponseEntity.notFound().build();
     }
+
 
 }
