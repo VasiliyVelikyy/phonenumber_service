@@ -1,19 +1,23 @@
 package com.example.demo.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.redis.core.RedisHash;
 
+import java.time.Instant;
+
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
-@RedisHash("client-accounts")
-public class ClientBalanceDto {
+@RedisHash("client-view")
+public class ClientBalanceSaveDto {
     @Id
     private String accountNumber;
     private double balance;
-
-
+    private String phoneNumber;
+    private Instant lastUpdated;
 }

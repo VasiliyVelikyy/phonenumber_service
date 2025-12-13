@@ -11,6 +11,7 @@ public class Constants {
     public static final String URL_PHONE_BY_GOOD_ACCOUNT = "/api/account/{accountNumber}/phone";
     public static final String URL_PHONE_BY_BAD_ACCOUNT = "/api/account/{accountNumber}/phone-with-problem";
     public static final String URL_INFO_FROM_CACHE = "/api/account/{accountNumber}/search/cache";
+    public static final String URL_INFO_TO_CACHE = "/api/account/{accountNumber}/save/cache";
     public static final String LOCAL_HOST = "http://localhost:8080";
     public static final String UKNOWN = "UKNOWN";
 }
