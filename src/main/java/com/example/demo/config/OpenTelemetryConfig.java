@@ -9,6 +9,7 @@ import io.opentelemetry.sdk.resources.Resource;
 import io.opentelemetry.sdk.trace.SdkTracerProvider;
 import io.opentelemetry.sdk.trace.export.BatchSpanProcessor;
 import io.opentelemetry.semconv.resource.attributes.ResourceAttributes;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,6 +17,7 @@ import org.springframework.context.annotation.Configuration;
 import java.time.Duration;
 
 @Configuration
+@Slf4j
 public class OpenTelemetryConfig {
 
     @Value("${spring.application.name:unknown-service}")
@@ -25,7 +27,7 @@ public class OpenTelemetryConfig {
 
     @Bean
     public OpenTelemetry openTelemetry() {
-        System.out.println("OpenTelemetry SDK initialized");
+        log.info("OpenTelemetry SDK initialized");
         // 1. Ресурс
         Resource resource = Resource.builder()
                 .put(ResourceAttributes.SERVICE_NAME, serviceName)
